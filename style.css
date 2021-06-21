@@ -8,7 +8,7 @@
     scroll-behavior: smooth; /*buscar que hace esto*/
 }
 .toggle{
-    position: fixed;
+    position: fixed; /*position fixed hace que el menu aparezca SIEMPRE en la pantalla. Baje o suba el menu permanece quieto*/
     top:30px;
     right:30px;
     width:50px;
@@ -102,6 +102,10 @@ p{
     letter-spacing: 2px;   
 }
 
+.btn:hover{
+    background:#02d4f0; /*COLOR DE HOVER BOTON CELESTE*/
+}
+
 /* ======== ESTILO DEL MENU DE NAVEGACION ======== */
 
 .sidebar{
@@ -139,10 +143,10 @@ p{
 .sidebar ul li a:hover{
     color:#00bcd4; /*cambiar a color #444*/
 }
-
+/*REDES SOCIALES*/
 .sci{
     position:absolute;
-    left:100px;
+    left:110px;
     bottom:20px;
     display:flex;
     justify-content:center;
@@ -152,12 +156,16 @@ p{
     margin-right:10px;
     list-style:none;
 }
-.sci li img{
-    transform:scale(0.5);
-    opacity:0.7;
-}
-.sci li img:hover{
-    opacity:1;
+.sci li a{
+    transform:scale(1.2);
+    color:#000;
+    width:56px;
+    font-size: 22px;
+    transition: .1s linear;
+    text-decoration: none;
+}              
+.sci li a:hover{
+    color:#00bcd4;
 }
 
 .titulo{
@@ -195,7 +203,7 @@ p{
 /* ======== SOBRE MI ======== */
 
 .sobreMi{
-    background:#000; /*cambiar color a 111 y probar como queda*/
+    background:#111; /*cambiar color a 111 y probar como queda*/
 }
 .sobreMi .content{
     display:flex;
@@ -207,7 +215,22 @@ p{
     width:49%;
 }
 .sobreMi .content .textBx p{
+    color:#fff; 
+}
+/* ======== MIS HABILIDADES ======== */
+.sobreMi .content .textBx h2{
     color:#fff;
+    font-size:1.8em;
+    font-weight:700;
+    letter-spacing:1px;
+    text-align:center;
+}
+.sobreMi .content .textBx h3{
+    color:#fff;
+    font-size:1.6em;
+    font-weight:500;
+    letter-spacing:1px;
+    text-align:center;
 }
 .sobreMi .content .imgBx{
     margin-left:40px;
@@ -216,7 +239,39 @@ p{
     max-width:100%;
     object-fit:cover;
 }
-/* revisar minuto 37:00 del video para atras para corroborar de que la imagen este bien */
+
+.sobreMi .content .textBx .flex ul{
+    list-style:none;
+    font-size:100px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    letter-spacing:145px;
+    margin-left:100px;
+    margin-top:30px;
+}
+
+/* COLORES DE LOS LOGOS*/
+.fa-html5{
+    color:#e34c26;
+}
+.fa-html5:hover{
+    color:#ff3300;
+}
+.fa-css3-alt{
+    color:#3367d6;
+}
+.fa-css3-alt:hover{
+    color:#0059ff;
+}
+.fa-js{
+    color:#ffa700;
+}
+.fa-js:hover{
+    color:#fbcd00;
+}
 
 /* ======== SERVICIOS ======== */
 
@@ -228,20 +283,27 @@ p{
 }
 .servicios .content .servicesBx{
     padding:40px 20px;
-    max-width:400px; /*iria 340 pero no queda bien*/ /*fijarse si con los media query tengo que cambiar los px a 340*/
+    max-width:400px; 
     margin:20px;
     transition:0.5s;
     text-align:center;
     background:#f5f5f5;
 }
 .servicios .content .servicesBx:hover{
-    background:#000; /*cambiar a 333 o 444*/
+    background:#222; /*cambiar a 333 o 444*/
 }
 .servicios .content .servicesBx img{
     max-width:80px;
     transition:0.5s;
 }
+.servicios .content .servicesBx i{
+    max-width:80px;
+    transition:0.5s;
+}
 .servicios .content .servicesBx:hover img{
+    filter:invert(1);
+}
+.servicios .content .servicesBx:hover i{
     filter:invert(1);
 }
 .servicios .content .servicesBx h2{
@@ -261,6 +323,18 @@ p{
 .servicios .content .servicesBx:hover p{
     color:#fff;
 }
+/* Tamaño de los logos usados en MIS SERVICIOS */
+#cell{
+    font-size:85px;
+}
+#reloj{
+    font-size:85px;
+    margin-right:20px;
+}
+#programar{
+    font-size:85px;
+    margin-right:30px;
+}
 /* === 47:07 ver de ahi para atras (35:00?) para cambiar de 6 a 4 cuadros y ordenarlos bien en la pantalla === */
 
 /* ======== PROYECTOS ======== */
@@ -275,7 +349,7 @@ p{
     position:relative;
     width:400px; /*265px cada foto sin son 8 proyectos, 4 por fila?*/
     height:400px;
-    margin:10px;
+    margin:20px;
     transition: 0.5s;
     text-align:center;
 }
@@ -303,7 +377,7 @@ p{
     transition:0.5;
 }
 .proyectos .content .workBx:hover .textBx{
-    opacity:1;
+    opacity:0.7;
 }
 .proyectos .content .workBx .textBx h3{
     color:#fff;
@@ -315,7 +389,7 @@ p{
 /* ======== CONTACTO ======== */
 
 .contacto{
-    background:#000;
+    background:#111;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -345,7 +419,7 @@ p{
     padding:10px;
     border:none;
     outline:none;
-    background:#111;
+    background:#222;
     color:#fff;
     font-size:16px;
     resize:none; /*hace que no se pueda agrandar o achicar la caja de texto*/
@@ -363,9 +437,12 @@ p{
     cursor:pointer;
     max-width:150px;
 }
+.contacto .contactForm .row input[type="submit"]:hover{
+    background:#02d4f0; /*COLOR DE HOVER BOTON CELESTE*/
+}
 .copyright {
 	color:#fff;
-    background:#111;
+    background:#222;
     text-align: center;
 	padding:10px;
 }
@@ -373,6 +450,12 @@ p{
     margin:0;
     font-size:16px;
 }
+
+/* El selector ::selection CSS pseudo-elemento aplica reglas a una porción de un documento que ha sido destacado (por ejemplo: selección con el mouse o algún otro puntero en un dispositivo) del usuario. */
+
+p::selection { color: white;  background: #02d4f0; }
+h3::selection { color: white;  background: #02d4f0; }
+
 
 @media (max-width:991px){ 
     .banner .imgSidebar{
@@ -436,3 +519,15 @@ p{
         margin:10px 0;
     }
 }
+
+@media (max-width: 360px){ 
+    .banner .contentBx, .sidebar{
+        width:100%;
+        padding:40px;
+    }
+    .banner .contentBx .btn{
+        padding:10px 20px;
+    }
+}
+
+/* ancho en el que deja de ser responsive 431px. 432 SI ES RESPONSIVE */
