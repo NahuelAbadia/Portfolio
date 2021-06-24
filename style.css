@@ -453,6 +453,17 @@ p{
     margin:0;
     font-size:16px;
 }
+.contacto .contactForm .titulo.blanco i{
+    transform:scale(1.7);
+    color:#f36541;
+    width:56px;
+    font-size: 22px;
+    transition: .1s linear;
+    text-decoration: none;
+} 
+.contacto .contactForm .titulo.blanco i:hover{
+    color:#e23b11;
+}
 
 /* El selector ::selection CSS pseudo-elemento aplica reglas a una porción de un documento que ha sido destacado (por ejemplo: selección con el mouse o algún otro puntero en un dispositivo) del usuario. */
 
