@@ -217,6 +217,10 @@ p{
 .sobreMi .content .textBx p{
     color:#fff; 
 }
+.sobreMi .content .textBx .btn{
+    text-align: center;
+    /* margin:0 60px;  */
+}
 /* ======== MIS HABILIDADES ======== */
 .sobreMi .content .textBx h2{
     color:#fff;
