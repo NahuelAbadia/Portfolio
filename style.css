@@ -453,7 +453,7 @@ p{
     margin:0;
     font-size:16px;
 }
-.contacto .contactForm .titulo.blanco a i{
+.contacto .contactForm .titulo.blanco .gmail i{
     transform:scale(1.7);
     color:#f36541;
     width:56px;
@@ -461,7 +461,7 @@ p{
     transition: .1s linear;
     text-decoration: none;
 } 
-.contacto .contactForm .titulo.blanco a i:hover{
+.contacto .contactForm .titulo.blanco .gmail i:hover{
     color:#e23b11;
 }
 
